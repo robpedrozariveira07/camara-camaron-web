@@ -68,10 +68,11 @@ header{position:fixed;inset:0 0 auto 0;z-index:80;transition:background .35s,box
 header.solid{background:rgba(255,250,241,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(18,22,61,.08)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:96px;gap:20px;transition:height .3s}
 header.solid .nav{height:74px}
-.nav-logo{display:flex;align-items:center}
-.nav-logo img{height:86px;width:auto;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35));transition:height .3s,filter .3s}
-header.solid .nav-logo img{height:58px;filter:drop-shadow(0 2px 6px rgba(18,22,61,.15))}
-@media (max-width:600px){.nav{height:80px}.nav-logo img{height:62px}header.solid .nav{height:66px}header.solid .nav-logo img{height:50px}}
+.nav-logo{align-self:flex-start;display:block;background:#fff;padding:12px 18px 14px;border-radius:0 0 26px 26px;box-shadow:0 14px 30px rgba(0,0,0,.28);transition:padding .3s,border-radius .3s,box-shadow .3s}
+.nav-logo img{display:block;height:92px;width:auto;transition:height .3s}
+header.solid .nav-logo{padding:8px 14px 9px;border-radius:0 0 18px 18px;box-shadow:0 6px 16px rgba(18,22,61,.12)}
+header.solid .nav-logo img{height:56px}
+@media (max-width:600px){.nav{height:74px}.nav-logo{padding:8px 12px 10px;border-radius:0 0 20px 20px}.nav-logo img{height:66px}header.solid .nav{height:64px}header.solid .nav-logo img{height:46px}}
 .nav-links{display:flex;gap:30px;list-style:none}
 .nav-links a{text-decoration:none;font-weight:700;font-size:.95rem;color:#fff;opacity:.9;transition:color .3s,opacity .3s}
 .nav-links a:hover{opacity:1;color:var(--sky)}
@@ -248,7 +249,7 @@ details p{color:var(--muted);margin-top:10px}
 .final .btn-ink{box-shadow:0 14px 30px rgba(18,22,61,.35)}
 footer{background:var(--ink);color:rgba(255,255,255,.75);padding:70px 0 120px}
 .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
-.foot img{height:130px;width:auto}
+.foot-logo{display:inline-block;background:#fff;border-radius:22px;padding:14px 18px}.foot-logo img{height:110px;width:auto;display:block}
 .foot h4{font-family:var(--serif);color:#fff;font-size:1.15rem;margin-bottom:10px}
 .foot a{text-decoration:none}
 .socials{display:flex;gap:10px}
@@ -275,7 +276,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.75);padding:70px 0 120px}
 
 <header id="hdr">
   <div class="wrap nav">
-    <a href="#inicio" class="nav-logo" aria-label="Cámara Camarón, inicio"><img src="img/logo.png" alt="Cámara Camarón · Cocina del Mar"></a>
+    <a href="#inicio" class="nav-logo" aria-label="Cámara Camarón, inicio"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="Cámara Camarón · Cocina del Mar" width="640" height="454"></picture></a>
     <ul class="nav-links">
       <li><a href="#casa">Nuestra casa</a></li>
       <li><a href="#estrellas">Especialidades</a></li>
@@ -505,7 +506,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.75);padding:70px 0 120px}
 <footer>
   <div class="wrap">
     <div class="foot">
-      <div><img src="img/logo.png" alt="Cámara Camarón"><p style="margin-top:16px;max-width:320px">Cocina del Mar. Marisquería familiar en la colonia Portales, CDMX.</p></div>
+      <div><span class="foot-logo"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="Cámara Camarón" width="640" height="454"></picture></span><p style="margin-top:16px;max-width:320px">Cocina del Mar. Marisquería familiar en la colonia Portales, CDMX.</p></div>
       <div><h4>Visítanos</h4><p>Victor Hugo 88, Col. Portales<br>C.P. 03300, CDMX<br>Lunes a domingo · 11:00 a 19:00 h</p></div>
       <div><h4>Síguenos</h4>
         <div class="socials">
