@@ -34,7 +34,8 @@
 <style>
 :root{
   --ink:#12163d; --ink-2:#1b2160; --navy:#2f3a8f; --orange:#ee6a30; --orange-2:#d9531c;
-  --sky:#6fbde6; --blue:#4595cf; --cream:#f6eddc; --paper:#fffaf1; --text:#1a1d3a; --muted:#5d6180;
+  --sky:#6fbde6; --blue:#4595cf; --cream:#f5ead6; --paper:#fffaf3; --foam:#eaf4fb; --text:#161a3a; --muted:#4c5174;
+  --orange-ink:#b8431a; --orange-lite:#ff8a57; --ring:#6fbde6;
   --serif:'Fraunces',Georgia,serif; --round:'Baloo 2',system-ui,sans-serif; --sans:'DM Sans',system-ui,sans-serif;
   --ease:cubic-bezier(.2,.7,.2,1);
 }
@@ -46,19 +47,19 @@ img,video{display:block;max-width:100%}
 a{color:inherit}
 .wrap{width:min(1200px,100% - 40px);margin-inline:auto}
 @media (max-width:480px){.wrap{width:calc(100% - 32px)}}
-.kicker{font-family:var(--sans);font-weight:700;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);display:inline-flex;align-items:center;gap:.7em}
+.kicker{font-family:var(--sans);font-weight:700;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--orange-ink);display:inline-flex;align-items:center;gap:.7em}
 .kicker::before{content:"";width:28px;height:2px;background:currentColor}
 .h2{font-family:var(--serif);font-weight:700;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.02;letter-spacing:-.02em;margin:.35em 0 .3em}
-.h2 em{font-style:italic;font-weight:500;color:var(--orange)}
+.h2 em{font-style:italic;font-weight:500;color:var(--orange-ink)}
 .lead{font-size:1.1rem;color:var(--muted);max-width:560px}
 section{position:relative}
 
 /* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;font-family:var(--sans);font-weight:700;text-decoration:none;border-radius:999px;padding:1em 1.7em;font-size:1rem;transition:transform .25s var(--ease),box-shadow .25s,background .25s,color .25s;border:2px solid transparent;cursor:pointer;white-space:nowrap}
 .btn:hover{transform:translateY(-2px)}
-.btn-o{background:var(--orange);color:#fff;box-shadow:0 10px 26px rgba(238,106,48,.38)}
-.btn-o:hover{background:var(--orange-2)}
-.btn-line{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-o{background:var(--orange);color:var(--ink);box-shadow:0 10px 26px rgba(238,106,48,.35)}
+.btn-o:hover{background:#ff7a3f;box-shadow:0 14px 32px rgba(238,106,48,.45)}
+.btn-line{border-color:rgba(255,255,255,.7);color:#fff}
 .btn-line:hover{background:#fff;color:var(--ink)}
 .btn-ink{background:var(--ink);color:#fff}
 .btn svg{width:1.15em;height:1.15em}
@@ -77,7 +78,7 @@ header.solid .nav-logo img{height:56px}
 .nav-links a{text-decoration:none;font-weight:700;font-size:.95rem;color:#fff;opacity:.9;transition:color .3s,opacity .3s}
 .nav-links a:hover{opacity:1;color:var(--sky)}
 header.solid .nav-links a{color:var(--ink)}
-header.solid .nav-links a:hover{color:var(--orange)}
+header.solid .nav-links a:hover{color:var(--orange-ink)}
 .nav .btn{padding:.75em 1.3em;font-size:.92rem}
 @media (max-width:900px){.nav-links{display:none}}
 @media (max-width:420px){.nav .btn span{display:none}.nav .btn{padding:.8em}}
@@ -93,12 +94,12 @@ header.solid .nav-links a:hover{color:var(--orange)}
 .live{width:8px;height:8px;border-radius:50%;background:#ff4d4d;display:inline-block;box-shadow:0 0 0 0 rgba(255,77,77,.6);animation:pulse 2s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(255,77,77,0)}100%{box-shadow:0 0 0 0 rgba(255,77,77,0)}}
 .hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(3rem,7.4vw,6.4rem);line-height:.92;letter-spacing:-.035em;margin:.28em 0 .32em}
-.hero h1 em{display:block;font-style:italic;font-weight:500;color:var(--orange);letter-spacing:-.02em}
-.hero-sub{font-size:1.15rem;color:rgba(255,255,255,.82);max-width:480px}
+.hero h1 em{display:block;font-style:italic;font-weight:500;color:var(--orange-lite);letter-spacing:-.02em}
+.hero-sub{font-size:1.15rem;color:rgba(255,255,255,.88);max-width:480px}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 .hero-meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px;font-size:.92rem;color:rgba(255,255,255,.75)}
 .hero-meta span{display:inline-flex;align-items:center;gap:.5em}
-.hero-meta span::before{content:"✦";color:var(--orange)}
+.hero-meta span::before{content:"✦";color:var(--orange-lite)}
 
 .hero-media{position:relative;justify-self:center;width:min(440px,100%)}
 .vcard{position:relative;aspect-ratio:3/4;border-radius:34px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.5);transform:rotate(2deg);background:#000 center/cover}
@@ -107,7 +108,7 @@ header.solid .nav-links a:hover{color:var(--orange)}
 .vtag{position:absolute;left:16px;top:16px;z-index:2;display:inline-flex;align-items:center;gap:.5em;background:rgba(18,22,61,.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff;font-size:.78rem;font-weight:700;letter-spacing:.06em;padding:.45em .9em;border-radius:999px}
 .seal{position:absolute;z-index:3;left:-58px;bottom:40px;width:150px;height:150px}
 .seal svg{width:100%;height:100%;animation:spin 18s linear infinite}
-.seal .core{position:absolute;inset:26px;border-radius:50%;background:var(--orange);display:grid;place-items:center;text-align:center;color:#fff;font-family:var(--round);font-weight:800;line-height:.95;box-shadow:0 14px 30px rgba(238,106,48,.45)}
+.seal .core{position:absolute;inset:26px;border-radius:50%;background:var(--orange);display:grid;place-items:center;text-align:center;color:var(--ink);font-family:var(--round);font-weight:800;line-height:.95;box-shadow:0 14px 30px rgba(238,106,48,.45)}
 .seal .core b{font-size:1.5rem;display:block}
 .seal .core small{font-size:.7rem;letter-spacing:.06em}
 @keyframes spin{to{transform:rotate(360deg)}}
@@ -115,7 +116,7 @@ header.solid .nav-links a:hover{color:var(--orange)}
 .blob.a{width:70%;aspect-ratio:1;background:var(--orange);right:-18%;top:-10%;opacity:.9}
 .blob.b{width:46%;aspect-ratio:1;border:2px dashed rgba(111,189,230,.55);left:-20%;top:12%}
 
-.marquee{background:var(--orange);color:#fff;overflow:hidden;position:relative;z-index:2}
+.marquee{background:var(--orange);color:var(--ink);overflow:hidden;position:relative;z-index:2}
 .marquee-track{display:flex;width:max-content;animation:mq 38s linear infinite}
 .marquee span{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.2rem,2.4vw,1.7rem);padding:16px 0;white-space:nowrap}
 .marquee span i{font-style:normal;margin:0 .9em;opacity:.7}
@@ -143,12 +144,12 @@ header.solid .nav-links a:hover{color:var(--orange)}
 .story-photo{position:absolute;left:0;bottom:0;width:48%;aspect-ratio:1;border-radius:24px;overflow:hidden;border:8px solid var(--paper);box-shadow:0 24px 50px rgba(18,22,61,.25)}
 .story-photo img{width:100%;height:100%;object-fit:cover}
 .story-chip{position:absolute;left:6%;top:12%;background:var(--ink);color:#fff;font-family:var(--serif);font-style:italic;font-size:1.15rem;padding:.7em 1.2em;border-radius:18px;transform:rotate(-4deg);box-shadow:0 14px 30px rgba(18,22,61,.3);z-index:2}
-.story-chip b{font-style:normal;color:var(--orange)}
+.story-chip b{font-style:normal;color:var(--orange-lite)}
 @media (max-width:900px){.story{padding:90px 0}.story-grid{grid-template-columns:1fr;gap:50px}.story-media{height:480px}}
 @media (max-width:480px){.story-media{height:400px}.stat b{font-size:2rem}}
 
 /* SIGNATURE */
-.sig{background:var(--cream);padding:120px 0 110px;overflow:hidden}
+.sig{background:var(--foam);padding:120px 0 110px;overflow:hidden}
 .sig-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
 .arrows{display:flex;gap:10px}
 .arrows button{width:54px;height:54px;border-radius:50%;border:2px solid var(--ink);background:transparent;color:var(--ink);font-size:1.3rem;cursor:pointer;transition:background .25s,color .25s}
@@ -163,12 +164,12 @@ header.solid .nav-links a:hover{color:var(--orange)}
 .dish h3{font-family:var(--serif);font-weight:700;font-size:1.6rem;line-height:1.1;margin-top:18px;color:var(--ink)}
 .dish p{color:var(--muted);font-size:.97rem;margin-top:6px}
 .dish.star .ph{outline:3px solid var(--orange);outline-offset:5px}
-.dish.star .num{background:var(--orange)}
+.dish.star .num{background:var(--orange);color:var(--ink);font-weight:700}
 
 /* REELS */
 .reels{background:var(--ink);color:#fff;padding:120px 0}
 .reels .h2{color:#fff}
-.reels .lead{color:rgba(255,255,255,.7)}
+.reels .lead{color:rgba(255,255,255,.82)}
 .reel-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:50px}
 .reel{position:relative;aspect-ratio:3/4;border-radius:22px;overflow:hidden;background:#000 center/cover}
 .reel:nth-child(even){margin-top:34px}
@@ -183,7 +184,7 @@ header.solid .nav-links a:hover{color:var(--orange)}
 .paper-txt{padding:56px 54px}
 .masthead{display:flex;justify-content:space-between;gap:12px;font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:22px}
 .extra{font-family:var(--round);font-weight:800;font-size:clamp(2.5rem,6vw,4.6rem);line-height:.9;color:var(--navy);text-transform:uppercase;letter-spacing:-.01em}
-.extra span{color:var(--orange);display:block}
+.extra span{color:var(--orange-ink);display:block}
 .paper-txt .lead{margin-top:18px;color:var(--text)}
 .steps{list-style:none;counter-reset:s;margin:26px 0 30px;display:grid;gap:12px}
 .steps li{counter-increment:s;display:flex;gap:14px;align-items:baseline;font-size:1.03rem}
@@ -193,7 +194,7 @@ header.solid .nav-links a:hover{color:var(--orange)}
 .paper-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .coupon{position:absolute;right:24px;bottom:24px;background:#fff;border:2px dashed var(--orange);border-radius:16px;padding:14px 20px;transform:rotate(-3deg);box-shadow:0 14px 30px rgba(0,0,0,.25);text-align:center}
 .coupon small{display:block;font-size:.7rem;letter-spacing:.16em;font-weight:700;color:var(--muted)}
-.coupon b{font-family:var(--round);font-size:1.9rem;color:var(--orange);line-height:1}
+.coupon b{font-family:var(--round);font-size:1.9rem;color:var(--orange-ink);line-height:1}
 @media (max-width:900px){.paper{grid-template-columns:1fr;box-shadow:8px 8px 0 var(--ink)}.paper-txt{padding:34px 24px}.paper-img{border-left:0;border-top:2px solid var(--ink);min-height:320px}}
 
 /* MENU */
@@ -203,7 +204,7 @@ header.solid .nav-links a:hover{color:var(--orange)}
 .menu-cols{columns:3 300px;column-gap:48px;margin-top:50px}
 .mcat{break-inside:avoid;margin-bottom:40px}
 .mcat h3{font-family:var(--serif);font-weight:700;font-size:1.7rem;color:var(--ink);display:flex;align-items:center;gap:12px;padding-bottom:10px;border-bottom:2px solid var(--ink);margin-bottom:6px}
-.mcat h3 small{font-family:var(--sans);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);font-weight:700;margin-left:auto}
+.mcat h3 small{font-family:var(--sans);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-ink);font-weight:700;margin-left:auto}
 .mcat li{list-style:none;display:flex;align-items:baseline;gap:8px;padding:10px 0;border-bottom:1px dotted rgba(18,22,61,.25);font-weight:500}
 .mcat li em{font-style:normal;font-size:.85rem;color:var(--muted);display:block;font-weight:400}
 .mcat li .hot{margin-left:auto;font-size:.85rem;white-space:nowrap}
@@ -220,13 +221,13 @@ header.solid .nav-links a:hover{color:var(--orange)}
 @media (max-width:800px){.gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}}
 
 /* VISIT */
-.visit{background:var(--cream);padding:120px 0}
+.visit{background:var(--foam);padding:120px 0}
 .visit-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;margin-top:44px}
 .map{border-radius:28px;overflow:hidden;min-height:460px;background:#e8e0d0;box-shadow:0 24px 50px rgba(18,22,61,.15)}
 .map iframe{width:100%;height:100%;min-height:460px;border:0;display:block}
 .vcard2{background:var(--ink);color:#fff;border-radius:28px;padding:40px 36px;display:flex;flex-direction:column;gap:26px}
 .vrow h3{font-family:var(--serif);font-weight:700;font-size:1.25rem;color:var(--sky);margin-bottom:4px}
-.vrow p{color:rgba(255,255,255,.85)}
+.vrow p{color:rgba(255,255,255,.9)}
 .vcard2 .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}
 @media (max-width:900px){.visit-grid{grid-template-columns:1fr}.map,.map iframe{min-height:340px}.vcard2{padding:32px 26px}}
 
@@ -236,27 +237,27 @@ header.solid .nav-links a:hover{color:var(--orange)}
 details{border-bottom:1px solid rgba(18,22,61,.15);padding:22px 0}
 summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font-family:var(--serif);font-weight:700;font-size:1.25rem;color:var(--ink)}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-family:var(--sans);font-size:1.6rem;line-height:1;color:var(--orange);transition:transform .3s}
+summary::after{content:"+";font-family:var(--sans);font-size:1.6rem;line-height:1;color:var(--orange-ink);transition:transform .3s}
 details[open] summary::after{transform:rotate(45deg)}
 details p{color:var(--muted);margin-top:10px}
 @media (max-width:900px){.faq-grid{grid-template-columns:1fr;gap:20px}}
 
 /* FINAL CTA + FOOTER */
-.final{background:var(--orange);color:#fff;text-align:center;padding:110px 0;overflow:hidden}
+.final{background:var(--orange);color:var(--ink);text-align:center;padding:110px 0;overflow:hidden}
 .final h2{font-family:var(--serif);font-weight:900;font-size:clamp(2.8rem,8vw,6.5rem);line-height:.95;letter-spacing:-.03em}
 .final h2 em{font-weight:500;font-style:italic;display:block}
-.final p{font-size:1.15rem;opacity:.92;margin:18px auto 30px;max-width:520px}
+.final p{font-size:1.15rem;opacity:1;font-weight:500;margin:18px auto 30px;max-width:520px}
 .final .btn-ink{box-shadow:0 14px 30px rgba(18,22,61,.35)}
-footer{background:var(--ink);color:rgba(255,255,255,.75);padding:70px 0 120px}
+footer{background:var(--ink);color:rgba(255,255,255,.82);padding:70px 0 120px}
 .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
 .foot-logo{display:inline-block;background:#fff;border-radius:22px;padding:14px 18px}.foot-logo img{height:110px;width:auto;display:block}
 .foot h4{font-family:var(--serif);color:#fff;font-size:1.15rem;margin-bottom:10px}
 .foot a{text-decoration:none}
 .socials{display:flex;gap:10px}
 .socials a{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center;transition:background .25s}
-.socials a:hover{background:var(--orange)}
+.socials a:hover{background:var(--orange)}.socials a:hover svg{fill:var(--ink)}
 .socials svg{width:20px;height:20px;fill:#fff}
-.copy{margin-top:46px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:.85rem;opacity:.65}
+.copy{margin-top:46px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:.85rem;color:rgba(255,255,255,.7)}
 @media (max-width:800px){.foot{grid-template-columns:1fr}}
 
 /* Mobile bar */
@@ -264,6 +265,53 @@ footer{background:var(--ink);color:rgba(255,255,255,.75);padding:70px 0 120px}
 .mbar.show{transform:none}
 .mbar a{flex:1;padding:.95em .8em;font-size:.95rem;box-shadow:0 12px 30px rgba(0,0,0,.3)}
 @media (max-width:800px){.mbar{display:flex}}
+
+
+.reels .kicker,.reels .h2 em{color:var(--orange-lite)}
+/* ===== UX ===== */
+.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--ink);color:#fff;padding:.7em 1.1em;border-radius:10px;font-weight:700;text-decoration:none;transition:top .2s}
+.skip:focus{top:12px}
+:focus-visible{outline:3px solid var(--ring);outline-offset:3px;border-radius:8px}
+.btn{min-height:48px}
+.nav-right{display:flex;align-items:center;gap:10px}
+.burger{display:none;width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.14);cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.burger i{display:block;width:20px;height:2px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s}
+header.solid .burger{background:rgba(18,22,61,.08)}
+header.solid .burger i{background:var(--ink)}
+.burger[aria-expanded="true"] i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] i:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.drawer{position:fixed;inset:0;z-index:70;background:var(--ink);color:#fff;padding:120px 28px 40px;display:flex;flex-direction:column;gap:26px;overflow-y:auto}
+.drawer ul{list-style:none;display:grid;gap:4px}
+.drawer ul a{display:block;font-family:var(--serif);font-weight:700;font-size:2rem;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.drawer .btn{align-self:flex-start}
+body.lock{overflow:hidden}
+body.lock header{background:transparent!important;box-shadow:none!important}
+body.lock header .nav-links{display:none}
+@media (max-width:900px){.burger{display:flex}.nav-right .btn{display:none}}
+.nav-links a.active{color:var(--sky);opacity:1}
+header.solid .nav-links a.active{color:var(--orange-ink)}
+.nav-links a{position:relative}
+.nav-links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:currentColor;border-radius:2px}
+.status{display:inline-flex;align-items:center;gap:.6em;font-size:.92rem;font-weight:700;margin-top:18px;padding:.45em .9em;border-radius:999px;background:rgba(255,255,255,.1);color:#fff}
+.status i{width:9px;height:9px;border-radius:50%;background:#9aa0c0;flex:none}
+.status.open i{background:#3ddc84;box-shadow:0 0 0 4px rgba(61,220,132,.2)}
+.status.closed i{background:#ff6b6b}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-top:28px;padding:4px 2px}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;text-decoration:none;font-weight:700;font-size:.92rem;color:var(--ink);border:2px solid rgba(18,22,61,.18);padding:.55em 1.1em;border-radius:999px;transition:background .2s,border-color .2s,color .2s;min-height:44px;display:inline-flex;align-items:center}
+.chips a:hover{border-color:var(--ink);background:var(--ink);color:#fff}
+@media (max-width:800px){.chips{position:sticky;top:64px;z-index:20;background:var(--paper);margin-inline:-16px;padding:10px 16px;box-shadow:0 8px 14px -12px rgba(18,22,61,.4)}}
+.mcat{scroll-margin-top:150px}
+section[id]{scroll-margin-top:70px}
+.progress{height:4px;background:rgba(18,22,61,.12);border-radius:4px;overflow:hidden;margin-top:18px;max-width:320px}
+.progress i{display:block;height:100%;width:20%;background:var(--ink);border-radius:4px;transition:width .2s}
+.arrows button:disabled{opacity:.3;cursor:default;background:transparent;color:var(--ink)}
+.reel{cursor:pointer}
+.reel::after{content:"❚❚";position:absolute;right:12px;top:12px;width:34px;height:34px;border-radius:50%;background:rgba(0,0,0,.5);color:#fff;font-size:.7rem;display:grid;place-items:center;opacity:0;transition:opacity .2s}
+.reel:hover::after,.reel.paused::after{opacity:1}
+.reel.paused::after{content:"▶";font-size:.85rem}
+.mcat li{min-height:44px}
 
 /* Reveal */
 .js .rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
@@ -273,6 +321,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.75);padding:70px 0 120px}
 </style>
 </head>
 <body>
+<a class="skip" href="#inicio">Saltar al contenido</a>
 
 <header id="hdr">
   <div class="wrap nav">
@@ -283,12 +332,27 @@ footer{background:var(--ink);color:rgba(255,255,255,.75);padding:70px 0 120px}
       <li><a href="#menu">Menú</a></li>
       <li><a href="#visitanos">Visítanos</a></li>
     </ul>
+    <div class="nav-right">
     <a class="btn btn-o js-msg" href="#" data-ref="web_header" aria-label="Aparta tu mesa">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.19 5.44 3.14 7.17.16.15.26.35.27.57l.05 1.78a.8.8 0 0 0 1.12.71l1.99-.88a.8.8 0 0 1 .53-.04c.91.25 1.88.39 2.9.39 5.64 0 10-4.13 10-9.7S17.64 2 12 2Zm6 7.46-2.94 4.66a1.5 1.5 0 0 1-2.17.4l-2.34-1.75a.6.6 0 0 0-.72 0l-3.160 2.4c-.42.32-.97-.18-.69-.63l2.94-4.66a1.5 1.5 0 0 1 2.17-.4l2.34 1.75a.6.6 0 0 0 .72 0l3.16-2.4c.42-.32.97.18.69.63Z"/></svg>
       <span>Aparta tu mesa</span>
     </a>
+    <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer"><i></i><i></i><i></i></button>
+    </div>
   </div>
 </header>
+
+<nav class="drawer" id="drawer" aria-label="Menú principal" hidden>
+  <ul>
+    <li><a href="#casa">Nuestra casa</a></li>
+    <li><a href="#estrellas">Especialidades</a></li>
+    <li><a href="#menu">Menú</a></li>
+    <li><a href="#promo">Tostada gratis</a></li>
+    <li><a href="#visitanos">Visítanos</a></li>
+  </ul>
+  <p class="status js-status"><i></i><span>Horario: 11:00 a 19:00 h</span></p>
+  <a class="btn btn-o js-msg" href="#" data-ref="web_drawer">Aparta tu mesa</a>
+</nav>
 
 <main id="inicio">
 
@@ -303,7 +367,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.75);padding:70px 0 120px}
         <a class="btn btn-o js-msg" href="#" data-ref="web_hero">Quiero mi tostada gratis</a>
         <a class="btn btn-line" href="#menu">Ver el menú</a>
       </div>
-      <div class="hero-meta rv d3"><span>Negocio familiar</span><span>Terraza</span><span>A domicilio</span><span>Abierto los 7 días</span></div>
+      <div class="hero-meta rv d3"><span>Negocio familiar</span><span>Terraza</span><span>A domicilio</span></div>
+      <p class="status status-dark js-status rv d3"><i></i><span>Abierto los 7 días · 11:00 a 19:00 h</span></p>
     </div>
     <div class="hero-media rv d1">
       <i class="blob a" aria-hidden="true"></i><i class="blob b" aria-hidden="true"></i>
@@ -360,7 +425,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.75);padding:70px 0 120px}
     </div>
     <div class="arrows rv"><button type="button" aria-label="Anterior" data-dir="-1">←</button><button type="button" aria-label="Siguiente" data-dir="1">→</button></div>
   </div>
-  <div class="rail" id="rail">
+  <div class="rail" id="rail" tabindex="0" aria-label="Especialidades, desliza para ver más">
     <article class="dish star"><div class="ph"><img src="img/torre.jpg" alt="Torre de mariscos" loading="lazy"></div><span class="num">01 · La favorita</span><h3>Torre de mariscos</h3><p>Capa sobre capa de mariscos frescos, aguacate y salsa negra de la casa.</p></article>
     <article class="dish"><div class="ph"><img src="img/coctel.jpg" alt="Cóctel de camarón" loading="lazy"></div><span class="num">02</span><h3>Cóctel de camarón</h3><p>El clásico en copa: camarón, aguacate y cilantro, preparado al momento.</p></article>
     <article class="dish"><div class="ph"><img src="img/camarones-coco.jpg" alt="Camarones al coco" loading="lazy"></div><span class="num">03</span><h3>Camarones al coco</h3><p>Crujientes por fuera, jugosos por dentro. Servidos en torre para compartir.</p></article>
@@ -370,6 +435,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.75);padding:70px 0 120px}
     <article class="dish"><div class="ph"><img src="img/tostada-camaron.jpg" alt="Tostada Cámara Camarón" loading="lazy"></div><span class="num">07</span><h3>Tostada Cámara Camarón</h3><p>La tostada de la casa, con camarón fresco y aguacate.</p></article>
     <article class="dish"><div class="ph"><img src="img/michelada.jpg" alt="Michelada con camarón" loading="lazy"></div><span class="num">08</span><h3>Michelada con camarón</h3><p>Bien escarchada y con camarones en el borde.</p></article>
   </div>
+  <div class="wrap"><div class="progress" aria-hidden="true"><i id="railbar"></i></div></div>
 </section>
 
 <!-- REELS -->
@@ -379,11 +445,11 @@ footer{background:var(--ink);color:rgba(255,255,255,.75);padding:70px 0 120px}
     <h2 class="h2 rv d1">Así se prepara <em>lo bueno</em></h2>
     <p class="lead rv d2">Sin filtros y sin prisa. Esto es lo que pasa en nuestra cocina todos los días.</p>
     <div class="reel-grid">
-      <figure class="reel rv" style="background-image:url(video/reel-torre.jpg)"><video class="js-vid" src="video/reel-torre.mp4" poster="video/reel-torre.jpg" muted loop playsinline preload="none"></video><figcaption>Armando la torre</figcaption></figure>
-      <figure class="reel rv d1" style="background-image:url(video/reel-coctel.jpg)"><video class="js-vid" src="video/reel-coctel.mp4" poster="video/reel-coctel.jpg" muted loop playsinline preload="none"></video><figcaption>Cóctel al momento</figcaption></figure>
-      <figure class="reel rv d2" style="background-image:url(video/reel-flambe.jpg)"><video class="js-vid" src="video/reel-flambe.mp4" poster="video/reel-flambe.jpg" muted loop playsinline preload="none"></video><figcaption>Directo al fuego</figcaption></figure>
-      <figure class="reel rv d3" style="background-image:url(video/reel-michelada.jpg)"><video class="js-vid" src="video/reel-michelada.mp4" poster="video/reel-michelada.jpg" muted loop playsinline preload="none"></video><figcaption>Michelada preparada</figcaption></figure>
-      <figure class="reel rv" style="background-image:url(video/reel-camarones.jpg)"><video class="js-vid" src="video/reel-camarones.mp4" poster="video/reel-camarones.jpg" muted loop playsinline preload="none"></video><figcaption>Camarones con arroz</figcaption></figure>
+      <figure tabindex="0" class="reel rv" style="background-image:url(video/reel-torre.jpg)"><video class="js-vid" src="video/reel-torre.mp4" poster="video/reel-torre.jpg" muted loop playsinline preload="none"></video><figcaption>Armando la torre</figcaption></figure>
+      <figure tabindex="0" class="reel rv d1" style="background-image:url(video/reel-coctel.jpg)"><video class="js-vid" src="video/reel-coctel.mp4" poster="video/reel-coctel.jpg" muted loop playsinline preload="none"></video><figcaption>Cóctel al momento</figcaption></figure>
+      <figure tabindex="0" class="reel rv d2" style="background-image:url(video/reel-flambe.jpg)"><video class="js-vid" src="video/reel-flambe.mp4" poster="video/reel-flambe.jpg" muted loop playsinline preload="none"></video><figcaption>Directo al fuego</figcaption></figure>
+      <figure tabindex="0" class="reel rv d3" style="background-image:url(video/reel-michelada.jpg)"><video class="js-vid" src="video/reel-michelada.mp4" poster="video/reel-michelada.jpg" muted loop playsinline preload="none"></video><figcaption>Michelada preparada</figcaption></figure>
+      <figure tabindex="0" class="reel rv" style="background-image:url(video/reel-camarones.jpg)"><video class="js-vid" src="video/reel-camarones.mp4" poster="video/reel-camarones.jpg" muted loop playsinline preload="none"></video><figcaption>Camarones con arroz</figcaption></figure>
     </div>
     <div class="reels-cta"><a class="btn btn-line" href="https://www.instagram.com/mariscoscamaracamaron/" target="_blank" rel="noopener">Síguenos en Instagram · @mariscoscamaracamaron</a></div>
   </div>
@@ -424,18 +490,19 @@ footer{background:var(--ink);color:rgba(255,255,255,.75);padding:70px 0 120px}
       </div>
       <div class="legend rv"><span>🌶️ Picosito</span><span>🌶️🌶️ Para valientes</span></div>
     </div>
+    <nav class="chips" aria-label="Categorías del menú"><a href="#m-cocteles">Cócteles</a><a href="#m-tostadas">Tostadas</a><a href="#m-tacos">Tacos</a><a href="#m-entradas">Entradas</a><a href="#m-delmar">Del mar</a><a href="#m-bebidas">Bebidas y postre</a></nav>
     <div class="menu-cols">
-      <div class="mcat rv"><h3>Cócteles <small>En copa</small></h3><ul>
+      <div class="mcat rv" id="m-cocteles"><h3>Cócteles <small>En copa</small></h3><ul>
         <li>Camarón</li><li>Ostión</li><li>Pulpo</li><li>Campechana</li><li><span>Vuelve a la vida<em>Mezcla de mariscos</em></span></li></ul></div>
-      <div class="mcat rv"><h3>Tostadas <small>La casa</small></h3><ul>
+      <div class="mcat rv" id="m-tostadas"><h3>Tostadas <small>La casa</small></h3><ul>
         <li>Cámara Camarón</li><li>Camarón con crema de chipotle <span class="hot">🌶️</span></li><li>Ceviche de pescado</li><li>Pulpo · Pulpo enamorado</li><li>Ostiones a la pimienta</li><li>Marlín ahumado</li><li>Atún al chipotle <span class="hot">🌶️</span></li></ul></div>
-      <div class="mcat rv"><h3>Tacos <small>Maíz o harina</small></h3><ul>
+      <div class="mcat rv" id="m-tacos"><h3>Tacos <small>Maíz o harina</small></h3><ul>
         <li>Pescado estilo Ensenada</li><li>Camarón estilo Ensenada</li><li>Cámara Camarón</li><li>Camarón con crema de chipotle <span class="hot">🌶️</span></li><li>Camarón a la diabla <span class="hot">🌶️🌶️</span></li><li>Pulpo a la diabla <span class="hot">🌶️🌶️</span></li><li>Marlín ahumado · Gobernador de marlín</li><li>Pulpo Don Vicente</li></ul></div>
-      <div class="mcat rv"><h3>Entradas <small>Para abrir</small></h3><ul>
+      <div class="mcat rv" id="m-entradas"><h3>Entradas <small>Para abrir</small></h3><ul>
         <li>Quesadillas de pescado, camarón o calamar</li><li><span>Empanadas horneadas<em>Camarón, marlín o atún</em></span></li><li>Tiritas de pescado</li><li>Gringa de marlín</li><li>Arroz con camarones</li></ul></div>
-      <div class="mcat rv"><h3>Del mar <small>Fuertes</small></h3><ul>
+      <div class="mcat rv" id="m-delmar"><h3>Del mar <small>Fuertes</small></h3><ul>
         <li>Torre de mariscos</li><li>Mojarra</li><li>Caldo de camarón</li><li>Camarones al coco</li><li>Ceviche de pescado estilo B.C.</li><li>Ceviche de camarón</li><li>Paella</li></ul></div>
-      <div class="mcat rv"><h3>Bebidas y postre <small>Para cerrar</small></h3><ul>
+      <div class="mcat rv" id="m-bebidas"><h3>Bebidas y postre <small>Para cerrar</small></h3><ul>
         <li>Micheladas y cerveza nacional</li><li>Clamato preparado</li><li>Aguas frescas y refrescos</li><li>Café americano y capuchino</li><li>Strudel con helado</li></ul></div>
     </div>
     <div class="menu-note rv">
@@ -468,7 +535,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.75);padding:70px 0 120px}
       <div class="map rv"><iframe title="Mapa: Cámara Camarón, Victor Hugo 88, Portales" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Victor+Hugo+88,+Portales,+Benito+Ju%C3%A1rez,+03300+Ciudad+de+M%C3%A9xico&output=embed"></iframe></div>
       <div class="vcard2 rv d1">
         <div class="vrow"><h3>Dirección</h3><p>Victor Hugo 88, Col. Portales<br>C.P. 03300, CDMX · Entre Bélgica y Balboa</p></div>
-        <div class="vrow"><h3>Horario</h3><p>Lunes a domingo<br>11:00 a 19:00 h</p></div>
+        <div class="vrow"><h3>Horario</h3><p>Lunes a domingo<br>11:00 a 19:00 h</p><p class="status status-dark js-status" style="margin-top:10px"><i></i><span></span></p></div>
         <div class="vrow"><h3>Cómo llegar</h3><p>A unas cuadras del Metro Portales (Línea 2).</p></div>
         <div class="btns">
           <a class="btn btn-o" href="https://www.google.com/maps/dir/?api=1&destination=Victor+Hugo+88,+Portales,+Benito+Ju%C3%A1rez,+03300+CDMX" target="_blank" rel="noopener">Cómo llegar</a>
@@ -562,10 +629,42 @@ setTimeout(() => document.querySelectorAll('.rv:not(.in)').forEach(el => { if (e
 /* Videos: solo se reproducen cuando están en pantalla */
 const vio = new IntersectionObserver(es => es.forEach(e => {
   const v = e.target;
-  if (e.isIntersecting && !reduce) { if (v.preload === 'none') v.preload = 'auto'; v.play().catch(() => {}); }
+  if (e.isIntersecting && !reduce && v.dataset.user !== 'paused') { if (v.preload === 'none') v.preload = 'auto'; v.play().catch(() => {}); }
   else v.pause();
 }), { threshold: .25 });
 document.querySelectorAll('.js-vid').forEach(v => { if (reduce) { v.removeAttribute('autoplay'); v.pause(); } vio.observe(v); });
+
+
+/* Menú móvil */
+const burger=document.getElementById('burger'), drawer=document.getElementById('drawer');
+const setDrawer=open=>{burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');drawer.hidden=!open;document.body.classList.toggle('lock',open);};
+burger.addEventListener('click',()=>setDrawer(drawer.hidden));
+drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setDrawer(false)));
+addEventListener('keydown',e=>{if(e.key==='Escape'&&!drawer.hidden){setDrawer(false);burger.focus();}});
+
+/* ¿Abierto ahora? (hora de CDMX) */
+(function(){
+  const OPEN=11, CLOSE=19;
+  const now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Mexico_City'}));
+  const h=now.getHours()+now.getMinutes()/60, open=h>=OPEN&&h<CLOSE;
+  const txt=open?(CLOSE-h<=1?'Abierto ahora · cerramos pronto (7:00 pm)':'Abierto ahora · hasta las 7:00 pm'):(h<OPEN?'Cerrado · abrimos hoy a las 11:00 am':'Cerrado · abrimos mañana a las 11:00 am');
+  document.querySelectorAll('.js-status').forEach(el=>{el.classList.add(open?'open':'closed');el.querySelector('span').textContent=txt;});
+})();
+
+/* Sección activa en el menú superior */
+const links=[...document.querySelectorAll('.nav-links a')];
+const sio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));}}),{rootMargin:'-45% 0px -50% 0px'});
+['casa','estrellas','menu','visitanos'].forEach(id=>{const el=document.getElementById(id);if(el)sio.observe(el);});
+
+/* Progreso y flechas del carrusel */
+(function(){
+  const rail=document.getElementById('rail'), bar=document.getElementById('railbar'), btns=document.querySelectorAll('.arrows button');
+  const upd=()=>{const max=rail.scrollWidth-rail.clientWidth;const r=max>0?rail.scrollLeft/max:1;bar.style.width=Math.max(12,(rail.clientWidth/rail.scrollWidth)*100+r*(100-(rail.clientWidth/rail.scrollWidth)*100))+'%';btns[0].disabled=rail.scrollLeft<8;btns[1].disabled=rail.scrollLeft>max-8;};
+  rail.addEventListener('scroll',()=>requestAnimationFrame(upd),{passive:true});addEventListener('resize',upd);upd();
+})();
+
+/* Reels: tocar para pausar / reproducir */
+document.querySelectorAll('.reel').forEach(f=>{const v=f.querySelector('video');const t=()=>{if(v.paused){v.play().catch(()=>{});f.classList.remove('paused');v.dataset.user='';}else{v.pause();f.classList.add('paused');v.dataset.user='paused';}};f.addEventListener('click',t);f.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t();}});});
 
 /* Carrusel de especialidades */
 const rail = document.getElementById('rail');
